@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: spy
+Version: 0.1
+Summary: Super simple monitoring for long running jobs
+Home-page: http://gjcourt.com/spy
+Author: George Courtsunis
+Author-email: gjcourt@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires: Flask (==0.8)

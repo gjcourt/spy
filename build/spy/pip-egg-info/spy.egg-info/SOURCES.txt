@@ -1,0 +1,7 @@
+pip-egg-info/spy.egg-info/PKG-INFO
+pip-egg-info/spy.egg-info/SOURCES.txt
+pip-egg-info/spy.egg-info/dependency_links.txt
+pip-egg-info/spy.egg-info/top_level.txt
+spy/__init__.py
+spy/server/__init__.py
+spy/server/server.py

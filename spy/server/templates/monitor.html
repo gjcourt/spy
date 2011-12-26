@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Monitor</title>
+        <style>
+            body {
+                background-color: black;
+                color: #FFF;
+                font-family: monospace;
+                font-size: 12pt;
+            }
+            .item {
+                border: thin dashed #FFF;
+                padding: 5px 20px;
+                margin: 10px 0;
+            }
+            .item .title {
+                padding: 10px 0 0;
+                margin: 0;
+            }
+            .item .left,
+            .item .right {
+                display: inline-block;
+            }
+            .item .left {
+                max-width: 200px;
+                margin-right: 20px;
+                width: 25%;
+            }
+            .item .right {
+                min-width: 400px;
+                width: 75%;
+            }
+            .item .right .progress,
+            .item .right .indicator {
+                border-radius: 5px;
+            }
+            .item .right .progress {
+                background-color: #FFF;
+                height: 40px;
+                width: 100%;
+            }
+            .item .right .indicator {
+                background-color: #CCC;
+                height: 40px;
+                width: 80%;
+            }
+            {% for item in items %}
+            #item-{{ item.name }} .right .indicator {
+                width: {{ item.complete }};
+            }
+            {% endfor %}
+        </style>
+    </head>
+    <body>
+        {% for item in items %}
+        <div id="item-{{ item.name }}" class="item">
+            <p class="title">{{ item.name }}</p>
+            <div class="left">
+                <p>{{ item.complete }} Complete</p>
+                <p>ETA: {{ item.eta }}</p>
+            </div>
+            <div class="right">
+                <div class="progress">
+                    <div class="indicator"></div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </body>
+</html>
